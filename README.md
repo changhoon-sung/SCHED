@@ -41,6 +41,9 @@ For build and loading instructions, please refer to the documentation provided i
     └── c_to_bpf.py          # Converts C code into BPF-compatible code
 ```
 
+## Quick Start
+See [HOWTO.md](HOWTO.md) for detailed instructions on building and running the example.
+
 ## Model Integration Points
 
 The distilled Decision Tree model is embedded into three decision-making functions exposed by the Linux [sched_ext](https://www.kernel.org/doc/html/next/scheduler/sched-ext.html) interface:

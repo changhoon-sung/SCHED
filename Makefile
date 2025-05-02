@@ -3,7 +3,7 @@ CC = gcc
 CLANG ?= clang
 LLC ?= llc
 STRIP ?= strip
-BPFTOOL ?= bpftool
+BPFTOOL ?= bpftool/src/bpftool
 
 # Directories
 SRCDIR = src
@@ -11,7 +11,7 @@ BUILDDIR = build
 BPFDIR = $(BUILDDIR)/bpf
 USERDIR = $(BUILDDIR)/user
 INCLUDEDIR = include
-LIBBPF_DIR = $(HOME)/libbpf/src
+LIBBPF_DIR = bpftool/libbpf/src
 
 # Flags
 CFLAGS = -g -O2 -Wall
@@ -45,7 +45,7 @@ INCLUDES += -I/usr/local/include
 INCLUDES += -I$(LIBBPF_DIR)
 SCX_INCLUDES = -I$(INCLUDEDIR)/scx
 
-LIBRARY_PATHS = -L/usr/local/lib64 -L/usr/local/lib 
+LIBRARY_PATHS = -L/usr/local/lib64 -L/usr/local/lib -L$(LIBBPF_DIR)
 LIBRARY_PATHS = -L$(LIBBPF_DIR)
 
 # Libraries
