@@ -1,6 +1,6 @@
 # SCHED (VTC'25)
 
-This repository supports the paper *SCHED* by demonstrating how to integrate a Decision-Tree-Based Scheduler into the Linux kernel using eBPF.
+This repository supports the paper [*SCHED*](vtc25-sched.pdf) by demonstrating how to integrate a Decision-Tree-Based Scheduler into the Linux kernel using eBPF.
 
 The example scheduler is implemented within a ROS-based autonomous vehicle scenario. Note that the RL state-action space and model specifications will vary depending on the target application and system configuration (e.g., number of CPUs).
 
